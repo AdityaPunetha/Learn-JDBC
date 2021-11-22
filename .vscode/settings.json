@@ -2,5 +2,20 @@
   "java.project.referencedLibraries": [
     "lib/**/*.jar",
     "c:\\Users\\Rajeev\\Downloads\\New folder\\mysql-connector-java-8.0.27\\mysql-connector-java-8.0.27\\mysql-connector-java-8.0.27.jar"
+  ],
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "vscode conn",
+      "database": "jdbc_setup",
+      "username": "vscodeuser",
+      "password": "password"
+    }
   ]
 }
