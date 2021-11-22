@@ -1,1 +1,2 @@
+-- @block
 SHOW DATABASES;
