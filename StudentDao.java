@@ -1,5 +1,7 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class StudentDao {
     public static boolean insertStudentToDB(Student stu) {
@@ -32,5 +34,29 @@ public class StudentDao {
             e.printStackTrace();
         }
         return f;
+    }
+
+    public static void showAllStudents() {
+        boolean f = false;
+        try {
+            Connection con = CP.CreateC();
+            String q = "select * from students";
+            Statement stmt = con.createStatement();
+            ResultSet set = stmt.executeQuery(q);
+            System.out.println("------------------------------------------------");
+            while (set.next()) {
+                int id = set.getInt(1);
+                String name = set.getString(2);
+                String phone = set.getString(3);
+                String city = set.getString("scity");
+                System.out.println("ID : " + id);
+                System.out.println("name : " + name);
+                System.out.println("phone : " + phone);
+                System.out.println("city : " + city);
+                System.out.println("------------------------------------------------");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
