@@ -5,7 +5,7 @@ public class Student {
     private String studentCity;
     private String studentPhone;
 
-    public Student(int studentId, String studentName, String studentCity, String studentPhone) {
+    public Student(int studentId, String studentName, String studentPhone, String studentCity) {
         super();
         this.studentId = studentId;
         this.studentCity = studentCity;
@@ -13,7 +13,7 @@ public class Student {
         this.studentPhone = studentPhone;
     }
 
-    public Student(String studentName, String studentCity, String studentPhone) {
+    public Student(String studentName, String studentPhone, String studentCity) {
         super();
         this.studentCity = studentCity;
         this.studentName = studentName;
