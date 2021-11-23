@@ -9,8 +9,19 @@ public class Main {
         String phone = sc.nextLine();
         System.out.print("Enter city: ");
         String city = sc.nextLine();
-        sc.close();
         Student stu = new Student(name, phone, city);
+        boolean answer = StudentDao.insertStudentToDB(stu);
+        if (answer) {
+            System.out.println("added");
+        } else {
+            System.out.println("err");
+        }
         System.out.println(stu);
+        System.out.print("Enter id to del: ");
+        int userID = sc.nextInt();
+        sc.close();
+
+        StudentDao.deleteStudent(userID);
+
     }
 }
