@@ -37,7 +37,6 @@ public class StudentDao {
     }
 
     public static void showAllStudents() {
-        boolean f = false;
         try {
             Connection con = CP.CreateC();
             String q = "select * from students";
